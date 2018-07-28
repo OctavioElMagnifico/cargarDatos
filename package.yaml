@@ -1,0 +1,48 @@
+name:                cargarDatos
+version:             0.1.0.0
+github:              "OctavioElMagnifico/cargarDatos"
+license:             BSD3
+author:              "Octavio M. Duarte"
+maintainer:          "duarteoctaviomartin@gmail.com"
+copyright:           "2018 Octavio M. Duarte"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/OctavioElMagnifico/cargarDatos#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  cargarDatos-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - cargarDatos
+
+tests:
+  cargarDatos-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - cargarDatos
