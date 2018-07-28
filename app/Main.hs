@@ -1,6 +1,10 @@
 module Main where
 
-import Lib
+import ProfesorRobot 
+import CargarDatos
 
 main :: IO ()
-main = someFunc
+main = do
+  archivo <- readFile "Materia.csv"
+  let líneas = lines archivo
+  putStrLn líneas!!1
