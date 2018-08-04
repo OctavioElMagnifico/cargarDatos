@@ -1,0 +1,63 @@
+cabal-version: >= 1.10
+
+-- This file has been generated from package.yaml by hpack version 0.29.5.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 685c48822cd85ecb8fd90c8e9daa42d767cbb6800a21f0891412087d7e311550
+
+name:           cargarDatos
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/OctavioElMagnifico/cargarDatos#readme>
+homepage:       https://github.com/OctavioElMagnifico/cargarDatos#readme
+bug-reports:    https://github.com/OctavioElMagnifico/cargarDatos/issues
+author:         Octavio M. Duarte
+maintainer:     duarteoctaviomartin@gmail.com
+copyright:      2018 Octavio M. Duarte
+license:        GPLv3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    ChangeLog.md
+    LEEME.md
+
+source-repository head
+  type: git
+  location: https://github.com/OctavioElMagnifico/cargarDatos
+
+library
+  exposed-modules:
+      Lib
+      ProfesorRobot
+  other-modules:
+      Paths_cargarDatos
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable cargarDatos-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_cargarDatos
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , cargarDatos
+  default-language: Haskell2010
+
+test-suite cargarDatos-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_cargarDatos
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , cargarDatos
+  default-language: Haskell2010
